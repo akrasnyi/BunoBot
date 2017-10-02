@@ -1,0 +1,13 @@
+node_modules
+.idea
+.vscode
+.chrome
+.babelcache
+.eslintcache
+.stylelintcache
+*.log
+npm-debug.log
+vendorFiles.js
+.nyc_output
+config/local.js
+
