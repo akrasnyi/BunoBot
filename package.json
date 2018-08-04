@@ -11,7 +11,8 @@
     "url": "https://github.com/akrasnyi/BunoBot"
   },
   "scripts": {
-    "start": "webpack -w",
+    "start": "BOT_TOKEN='667176495:AAH0DtWmLIH58qqz2VzVPpO4CXel-gaUA6U' node app.js",
+    "client": "webpack -w",
     "build": "NODE_ENV=production webpack -p --progress",
     "lint": "eslint . --ext .js,.jsx"
   },
@@ -52,11 +53,13 @@
   },
   "dependencies": {
     "moment": "2.18.1",
+    "node-telegram-bot-api": "^0.30.0",
     "object-hash": "1.1.8",
     "prop-types": "15.5.10",
     "react": "16.0.0",
     "react-dom": "16.0.0",
-    "react-lightning-design-system": "2.4.0"
+    "react-lightning-design-system": "2.4.0",
+    "telegraf": "^3.22.1"
   },
   "standard": {
     "parser": "babel-eslint"

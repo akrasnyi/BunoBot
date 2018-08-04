@@ -1,3 +1,1 @@
 # BunoBot
-userName: 'best_uno_bot',
-token: '667176495:AAH0DtWmLIH58qqz2VzVPpO4CXel-gaUA6U'
