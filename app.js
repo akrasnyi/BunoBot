@@ -36,6 +36,10 @@ const create = new WizardScene(
     (ctx) => {
       Object.assign(playersObj, ctx.message.text.split(','))
       console.log(playersObj)
+      Object.keys(playersObj).forEach(e => {
+        playersObj[e] = {name: playersObj[e], score: 0}
+      })
+      console.log(playersObj)
       return ctx.wizard.next()
     },
     
