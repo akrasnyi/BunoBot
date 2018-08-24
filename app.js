@@ -19,32 +19,23 @@ bot.command('modern', ({ reply }) => reply('Yo'))
 bot.command('hipster', Telegraf.reply('λ'))
 
 // Сцена создания новой партии
-let playerQty = 0
 let players = []
+let playersObj = {}
 const create = new WizardScene(
     "create", // Имя сцены
     (ctx) => {
-      ctx.reply('Этап 1: Количество игроков');
+      ctx.reply(`Имена игроков через запятую`);
       return ctx.wizard.next(); // Переходим к следующему обработчику.
     },
     (ctx) => {
-      console.log('qty: ', ctx.message.text)
-      if (!Number.isInteger(parseInt(ctx.message.text))){
-        ctx.reply('Значение должно быть числом');
-        // ctx.wizard.back(); // Вернуться к предыдущиму обработчику
-      } else {
-        playerQty = parseInt(ctx.message.text) //Saving state, should be rewritten to session
-        return ctx.wizard.next(); // Переходим к следующему обработчику.
-      }
+      players.push(ctx.message.text.split(','))
+      console.log(players)
+      ctx.reply(`конец тебе, кожаный ублюдок`)
+      return ctx.wizard.next()
     },
     (ctx) => {
-      let i = 0
-      while (i < playerQty){
-        ctx.reply(`Имя игрока ${i}`);
-        players.push(ctx.message.text)
-        i++
-      }
-      console.log(players)
+      Object.assign(playersObj, ctx.message.text.split(','))
+      console.log(playersObj)
       return ctx.wizard.next()
     },
     
