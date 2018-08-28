@@ -11,7 +11,7 @@
     "url": "https://github.com/akrasnyi/BunoBot"
   },
   "scripts": {
-    "start": "BOT_TOKEN='667176495:AAH0DtWmLIH58qqz2VzVPpO4CXel-gaUA6U' node app.js",
+    "start": "BOT_TOKEN='654393017:AAEAytWGxo26lLkbn1XfxucpXTJOKRftFh4' node ./src/server/app.js",
     "client": "webpack -w",
     "build": "NODE_ENV=production webpack -p --progress",
     "lint": "eslint . --ext .js,.jsx"
@@ -32,7 +32,7 @@
     "css-loader": "^0.28.7",
     "eslint": "^3.19.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard": "^10.2  .1",
     "eslint-config-standard-react": "^5.0.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.7.0",
@@ -53,6 +53,8 @@
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
     "moment": "2.18.1",
     "node-telegram-bot-api": "^0.30.0",
     "object-hash": "1.1.8",
