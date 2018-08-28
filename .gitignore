@@ -10,4 +10,4 @@ npm-debug.log
 vendorFiles.js
 .nyc_output
 config/local.js
-
+package-lock.json
