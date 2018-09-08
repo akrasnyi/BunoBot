@@ -35,13 +35,6 @@ const create = new WizardScene(
       })
       console.log(playersObj)
       ctx.reply(`${JSON.stringify(playersObj, null, 4)}}`);
-      return ctx.wizard.next()
-    },
-    
-    // ...
-  
-    (ctx) => {
-      ctx.reply('Финальный этап: создание матча.');
       return ctx.scene.leave();
     }
   );
@@ -60,13 +53,6 @@ const create = new WizardScene(
       })
       console.log(playersObj)
       ctx.reply(`${JSON.stringify(playersObj, null, 4)}`);
-      return ctx.wizard.next()
-    },
-    
-    // ...
-  
-    (ctx) => {
-      ctx.reply('Финальный этап: создание матча.');
       return ctx.scene.leave();
     }
   );
