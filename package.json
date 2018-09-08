@@ -11,7 +11,7 @@
     "url": "https://github.com/akrasnyi/BunoBot"
   },
   "scripts": {
-    "start": "BOT_TOKEN='654393017:AAEAytWGxo26lLkbn1XfxucpXTJOKRftFh4' node ./src/server/app.js",
+    "start": "BOT_TOKEN='667176495:AAH0DtWmLIH58qqz2VzVPpO4CXel-gaUA6U' node ./app.js",
     "client": "webpack -w",
     "build": "NODE_ENV=production webpack -p --progress",
     "lint": "eslint . --ext .js,.jsx"
